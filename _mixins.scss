@@ -1,0 +1,90 @@
+///////// MEDIA QUERIES////////////////
+@mixin telefono {
+    @media only screen and (min-width: #{$telefono}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: #{$tablet}) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media only screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+
+/*********** CONTAINER IN THE HEAD *************/
+
+@mixin left_right_head_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin upper_icon_format{
+    height: $height_in_header;
+    width: $height_in_header;
+    border-radius: 50%;
+    //border: 1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    &:hover{
+        background-color: $color_background_icon; // we need to adjust colors
+    }
+    .upper_icon{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+
+@mixin botton_header($custom_width,$color_no_hover,$color_hover,$color_font){
+    height: $height_in_header;
+    width: $custom_width;
+    //border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: $color_no_hover;//----> se puede sacar para hacer un mixing
+    color: $color_font;//----> se puede sacar para hacer un mixing
+    &:hover{
+        background-color: $color_hover;
+    }
+}
+
+@mixin background_image($imagen){
+    
+
+
+}
+
+/*************** Top Botons ********/
+@mixin top_rigt_boton_config(){
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 40px;
+    width: 4rem;
+    //border: 1px solid black;
+    border-radius: 4px;
+    margin-left: 1rem;
+    &:hover{
+        background-color: white;
+    }
+}
+
+/*********** LEFT CONTAINER ***********/
+@mixin icon_config(){
+    .icon{
+        width:1.5rem;
+        height: 1.5rem;
+    }
+}
